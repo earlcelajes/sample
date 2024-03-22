@@ -25,8 +25,12 @@ Route::group([
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
 
+    Route::get('/get-authors', [AuthorController::class, 'getAuthors']);
     Route::post('/add-author', [AuthorController::class, 'addAuthor']);
 
+    Route::get('/get-books', [BookController::class, 'getBooks']);
     Route::post('/add-book', [BookController::class, 'addBook']);
+    Route::put('/update-book/{id}', [BookController::class, 'updateBook']);
+    Route::delete('/delete-book/{id}', [BookController::class, 'deleteBook']);
 
 });

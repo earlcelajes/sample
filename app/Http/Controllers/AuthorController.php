@@ -11,7 +11,11 @@ class AuthorController extends Controller
 
     }
 
-    public function addAutor(Request $request){
-        return $this->authorService->addAutor($request);
+    public function getAuthors(){
+        return $this->authorService->getAuthors();
+    }
+
+    public function addAuthor(Request $request){
+        return $this->authorService->addAuthor($request);
     }
 }

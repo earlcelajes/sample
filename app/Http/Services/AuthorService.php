@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 interface AuthorService
 {
-    public function addAutor(Request $request);
+    public function getAuthors();
+    
+    public function addAuthor(Request $request);
 }

@@ -9,7 +9,17 @@ use Illuminate\Http\Request;
 
 Class AuthorServiceImpl implements AuthorService
 {
-    public function addAutor(Request $request){
+    public function getAuthors(){
+        $data = Author::all();
+
+        return response()->json([
+            "success" => true,
+            "message" => "Fetched authors.",
+            "data" => $data
+        ]);
+    }
+
+    public function addAuthor(Request $request){
         $result = Author::create([
             'name' => $request->name
         ]);

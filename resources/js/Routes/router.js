@@ -3,6 +3,8 @@ import LoginPage from "../Components/Pages/LoginPage.vue";
 import NotFound from "../Components/404.vue";
 import RegisterPage from "../Components/Pages/RegisterPage.vue";
 import HomePage from "../Components/Pages/HomePage.vue";
+import AddAuthorPage from "../Components/Pages/AddAuthorPage.vue";
+import AddBookPage from "../Components/Pages/AddBookPage.vue";
 
 const routes = [
     {
@@ -19,6 +21,16 @@ const routes = [
         path: "/home",
         name: "Home",
         component: HomePage
+    },
+    {
+        path: "/add-author",
+        name: "AddAuthor",
+        component: AddAuthorPage
+    },
+    {
+        path: "/add-book",
+        name: "AddBook",
+        component: AddBookPage
     },
 
     {
